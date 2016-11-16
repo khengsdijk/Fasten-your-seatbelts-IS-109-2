@@ -61,6 +61,7 @@ public class PrototypeFys extends Application {
         
         Scherm2.add(btn2, 0, 1);
         
+        // de derde knop wordt aangemaakt
         Button btn3 = new Button();
         btn3.setText("View Baggage Catalogue ");
         btn3.setPrefSize(200, 50);
@@ -79,8 +80,10 @@ public class PrototypeFys extends Application {
                     }
                 });
         
+         // de derde knop wordt aan scherm2 toegevoegd
         Scherm2.add(btn3, 0, 2);
         
+        // een scene met scherm2 wordt aangemaakt
         Scene scene2 = new Scene(Scherm2, 1000, 650);
         
         
@@ -90,6 +93,8 @@ public class PrototypeFys extends Application {
             
             @Override
             public void handle(ActionEvent event) {
+                
+                
                 primaryStage.setScene(scene2);
             }
         });
