@@ -29,18 +29,21 @@ public class PrototypeFys extends Application {
     @Override
     public void start(Stage primaryStage) {
         
+        // het eerste scherm wordt hier aangemaakt
         GridPane root = new GridPane();
         root.setAlignment(Pos.CENTER);
         root.setHgap(10);
         root.setVgap(10);
         root.setPadding(new Insets(25, 25, 25, 25));
         
+        // het tweede scherm wordt hier aangemaakt
         GridPane Scherm2 = new GridPane();
         Scherm2.setAlignment(Pos.CENTER);
         Scherm2.setHgap(10);
         Scherm2.setVgap(10);
         Scherm2.setPadding(new Insets(25, 25, 25, 25));
         
+        // een tweede knop wordt aangemaakt
         Button btn2 = new Button();
         btn2.setText("View existing case ");
         btn2.setPrefSize(200, 50);
@@ -61,38 +64,34 @@ public class PrototypeFys extends Application {
         
         Scherm2.add(btn2, 0, 1);
         
+        // de derde knop wordt aangemaakt
         Button btn3 = new Button();
         btn3.setText("View Baggage Catalogue ");
         btn3.setPrefSize(200, 50);
         btn3.setFont(Font.font("Times New Roman", 15));
         btn3.setStyle("-fx-base:red;-fx-border-color:blue");
         
-         btn3.setOnAction(new EventHandler<ActionEvent>() {
-
-                    int i = 0;
-                    
-                    @Override
-                    public void handle(ActionEvent event) {
-
-                        i++;
-                        btn3.setText(String.valueOf(i));    
-                    }
-                });
+         
         
+         // de derde knop wordt aan scherm2 toegevoegd
         Scherm2.add(btn3, 0, 2);
         
+        // een scene met scherm2 wordt aangemaakt
         Scene scene2 = new Scene(Scherm2, 1000, 650);
         
-        
+        // de login knop wordt aangemaakt
         Button btn = new Button();
         btn.setText("login");
         btn.setOnAction(new EventHandler<ActionEvent>() {
             
             @Override
             public void handle(ActionEvent event) {
+                
+                
                 primaryStage.setScene(scene2);
             }
         });
+        // de knop wordt toegevoegd aan het eerste scherm
         root.add(btn, 1, 3);
         
         Label userName = new Label("User Name:");
@@ -119,6 +118,31 @@ public class PrototypeFys extends Application {
         primaryStage.setTitle("Login");
         primaryStage.setScene(scene);
         primaryStage.show();
+        
+        
+        // een derde scherm wordt aangemaakt
+        GridPane existingCases = new GridPane();
+        existingCases.setAlignment(Pos.CENTER);
+        existingCases.setHgap(10);
+        existingCases.setVgap(10);
+        existingCases.setPadding(new Insets(25, 25, 25, 25));
+        
+        Scene Scene3 = new Scene(existingCases, 1000, 650);
+        Button btn4 = new Button();
+        btn4.setText("View Baggage Catalogue");
+        btn4.setPrefSize(200, 20);
+        
+        existingCases.add(btn4, 0, 1);
+        
+        // button 3 krijgt de fuctie om naar scherm 3 te wisselen
+        btn2.setOnAction(new EventHandler<ActionEvent>() {
+                    int i = 0;
+                    @Override
+                    public void handle(ActionEvent event) {
+                        primaryStage.setScene(Scene3);
+                    }
+                });
+        
     }
 
     /**
