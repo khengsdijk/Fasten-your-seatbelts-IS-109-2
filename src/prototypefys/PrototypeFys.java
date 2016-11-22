@@ -12,6 +12,7 @@ import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.GridPane;
+import javafx.scene.layout.HBox;
 import javafx.scene.layout.StackPane;
 import javafx.scene.paint.Color;
 import javafx.scene.shape.Rectangle;
@@ -128,11 +129,41 @@ public class PrototypeFys extends Application {
         existingCases.setPadding(new Insets(25, 25, 25, 25));
         
         Scene Scene3 = new Scene(existingCases, 1000, 650);
+        
+        // vierde knop wordt aangemaakt
         Button btn4 = new Button();
         btn4.setText("View Baggage Catalogue");
-        btn4.setPrefSize(200, 20);
+        btn4.setPrefSize(200, 30);
+        btn4.setStyle("-fx-base:red;-fx-border-color:blue");
+        btn4.setFont(Font.font("Times New Roman", 15));
         
-        existingCases.add(btn4, 0, 1);
+        existingCases.add(btn4, 0, 2);
+        
+        HBox Bagage = new HBox();
+        
+        Button btn5 = new Button();
+        btn5.setText("options");
+        btn5.setPrefSize(80, 30);
+        btn5.setStyle("-fx-base:red;-fx-border-color:blue");
+        btn5.setFont(Font.font("Times New Roman", 15));
+        
+        Button btn6 = new Button();
+        btn6.setText("Back");
+        btn6.setPrefSize(80, 30);
+        btn6.setStyle("-fx-base:red;-fx-border-color:blue");
+        btn6.setFont(Font.font("Times New Roman", 15));
+        
+        Bagage.getChildren().addAll(btn5, btn6);
+        
+        existingCases.add(Bagage, 0, 3);
+        
+        Label ZoekLabel = new Label("Zoeken:");
+        existingCases.add(ZoekLabel, 0, 1);
+
+        TextField Zoeken = new TextField();
+        existingCases.add(Zoeken, 1, 1);
+        
+        
         
         // button 3 krijgt de fuctie om naar scherm 3 te wisselen
         btn2.setOnAction(new EventHandler<ActionEvent>() {
