@@ -30,6 +30,8 @@ public class PrototypeFys extends Application {
     @Override
     public void start(Stage primaryStage) {
         
+        // JE MOEDER
+        
         // het eerste scherm wordt hier aangemaakt
         GridPane root = new GridPane();
         root.setAlignment(Pos.CENTER);
