@@ -1,10 +1,8 @@
 package prototypefys;
 
 import javafx.application.Application;
-import javafx.geometry.Insets;
-import javafx.geometry.Pos;
 import javafx.scene.Scene;
-import javafx.scene.layout.GridPane;
+import javafx.scene.control.Button;
 import javafx.scene.layout.Pane;
 import javafx.stage.Stage;
 
@@ -24,13 +22,21 @@ public class PrototypeFys extends Application {
     LoginScherm root = new LoginScherm();
     Pane scherm = root.MaakHetScherm();
     
-    Scene scene = new Scene(scherm, 900, 800);
+   BagageCatalogue cataloog = new BagageCatalogue();
+   
+   Pane scherm2 = cataloog.MaakCatalogue();
+       
+    
+    
+    Scene scene = new Scene(scherm2, 900, 800);
         
         primaryStage.setTitle("loginscherm test");
         primaryStage.setScene(scene);
         primaryStage.setResizable(true);
         primaryStage.show();
     
+        
+         
         
         
         

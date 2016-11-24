@@ -54,8 +54,8 @@ public class LoginScherm {
         
         Button login = new Button();
         login.setText("Login");
-        login.setStyle("-fx-background-color: #F42BA0;-fx-text-fill:#FAFA4A"); 
-        root.add(login, 1, 3);
+        login.setStyle("-fx-background-color: #F42BA0;-fx-text-fill:#FAFA4A");
+        root.add(login, 0, 3);
         
         return root;
     }
