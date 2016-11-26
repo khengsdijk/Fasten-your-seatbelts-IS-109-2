@@ -1,5 +1,7 @@
 package prototypefys;
 
+import javafx.event.ActionEvent;
+import javafx.event.EventHandler;
 import javafx.geometry.Insets;
 import javafx.geometry.Pos;
 import javafx.scene.control.Button;
@@ -14,6 +16,8 @@ import javafx.scene.text.Text;
  * @author Koen Hengsdijk
  */
 public class LoginScherm {
+    
+    private Button login = new Button();
 
     LoginScherm() {
 
@@ -52,12 +56,19 @@ public class LoginScherm {
         root.add(text2, 1, 2);
         root.setStyle("-fx-background-color: #15EA4B;");
         
-        Button login = new Button();
+        
         login.setText("Login");
         login.setStyle("-fx-background-color: #F42BA0;-fx-text-fill:#FAFA4A");
         root.add(login, 0, 3);
         
         return root;
     }
-
+    
+    public void Wissel(){
+        
+        
+        this.login.setText("g ");
+        
+        
+    }
 }
