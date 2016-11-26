@@ -23,7 +23,7 @@ public class LoginScherm {
 
     }
 
-    public Pane MaakHetScherm() {
+    public GridPane MaakHetScherm() {
         
         
         GridPane root = new GridPane();
@@ -55,11 +55,6 @@ public class LoginScherm {
         text2.setPrefWidth(10);
         root.add(text2, 1, 2);
         root.setStyle("-fx-background-color: #15EA4B;");
-        
-        
-        login.setText("Login");
-        login.setStyle("-fx-background-color: #F42BA0;-fx-text-fill:#FAFA4A");
-        root.add(login, 0, 3);
         
         return root;
     }
