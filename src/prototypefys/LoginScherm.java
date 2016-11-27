@@ -22,6 +22,11 @@ public class LoginScherm {
     LoginScherm() {
 
     }
+    
+    public final String DB_NAME = "MyAirline";
+    public final String DB_SERVER = "localhost:3306";
+    public final String DB_ACCOUNT = "beheerder";
+    public final String DB_PASSWORD = "nooitgedacht";
 
     public GridPane MaakHetScherm() {
         
@@ -56,14 +61,13 @@ public class LoginScherm {
         root.add(text2, 1, 2);
         root.setStyle("-fx-background-color: #15EA4B;");
         
+        
+        
         return root;
     }
     
-    public void Wissel(){
+    public void VoegKnopToe(GridPane scherm, Button Knop){
         
-        
-        this.login.setText("g ");
-        
-        
+        scherm.add(Knop, 0, 3); 
     }
 }

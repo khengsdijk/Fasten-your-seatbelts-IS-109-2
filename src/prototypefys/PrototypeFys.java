@@ -63,7 +63,8 @@ public class PrototypeFys extends Application {
                 primaryStage.setScene(scene2);
             }
         });
-        cataloog.VoegKnopToe(scherm, login);
+        
+        loginscherm.VoegKnopToe(scherm, login);
     }
 
    

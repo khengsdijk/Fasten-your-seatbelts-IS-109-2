@@ -1,16 +1,20 @@
 package prototypefys;
 
 import javafx.beans.property.ReadOnlyStringWrapper;
+import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
+import javafx.event.ActionEvent;
+import javafx.event.EventHandler;
 import javafx.geometry.Insets;
 import javafx.geometry.Pos;
 import javafx.scene.control.Button;
+import javafx.scene.control.ComboBox;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.TextField;
 import javafx.scene.layout.ColumnConstraints;
 import javafx.scene.layout.GridPane;
 import javafx.scene.layout.HBox;
-import javafx.scene.layout.Pane;
 import javafx.scene.layout.StackPane;
 import nl.hva.hboict.sql.DataRow;
 import nl.hva.hboict.sql.DataTable;
@@ -44,24 +48,46 @@ public class BagageCatalogue {
         root.getColumnConstraints().add(new ColumnConstraints(200));
         
         GridPane Zoekscherm = new GridPane();
+        Zoekscherm.setPadding(new Insets(25, 25, 25, 25));
+        Zoekscherm.setHgap(10);
+        Zoekscherm.setVgap(10);
         Zoekscherm.setPrefSize(150, 100);
         Zoekscherm.setMaxSize(150, 100);
         Zoekscherm.setStyle("-fx-base:orange;-fx-border-color:black");
         Zoekscherm.setAlignment(Pos.CENTER);
-
         Zoekscherm.setPrefSize(250, 250);
         Zoekscherm.setMaxSize(250, 250);
         
         StackPane EmptyPane = new StackPane();
         EmptyPane.setPrefSize(250, 150);
         
+        StackPane EmptyPane2 = new StackPane();
+        EmptyPane2.setPrefSize(50, 50);
         TextField tekst = new TextField("search");
 
         HBox hbox = new HBox();
         hbox.setPadding(new Insets(5, 12, 5, 12));
         hbox.setSpacing(10);
         
-
+        ObservableList<String> options = 
+        FXCollections.observableArrayList(
+        "CaseID",
+        "Country",
+        "Flight Code"
+                 );
+        final ComboBox comboBox = new ComboBox(options);
+        String text;
+        Button ZoekTabel = new Button("Search");
+        ZoekTabel.setOnAction(new EventHandler<ActionEvent>() {
+            @Override
+            public void handle(ActionEvent event) {
+                
+                String output = (String) comboBox.getValue();
+                System.out.println(output);
+            }
+        });
+        
+        
         Button buttonCurrent = new Button("main menu");
         buttonCurrent.setPrefSize(100, 20);
 
@@ -69,14 +95,16 @@ public class BagageCatalogue {
         buttonProjected.setPrefSize(100, 20);
         hbox.getChildren().addAll(buttonCurrent, buttonProjected);
 
-        Zoekscherm.add(tekst, 1, 0);
+        Zoekscherm.add(tekst, 1, 1);
+        Zoekscherm.add(comboBox, 1, 0);
+        Zoekscherm.add(ZoekTabel, 1, 2);
         
         root.add(EmptyPane, 0, 1);
         root.add(Zoekscherm, 0 , 3);
         root.add(hbox, 0, 2);
+        root.add(EmptyPane2, 1, 1);
         
-        
-        root.add(createJavaFXReadOnlyDataTableView(airportData), 1 , 2 , 1, 2);
+        root.add(createJavaFXReadOnlyDataTableView(airportData), 2 , 3 , 2, 3);
         
 
         return root;
@@ -116,8 +144,5 @@ public class BagageCatalogue {
         return tv;
     }
 
-    public void VoegKnopToe(GridPane scherm, Button Knop){
-        
-        scherm.add(Knop, 0, 3); 
-    }
+    
 }
