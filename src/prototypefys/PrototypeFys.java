@@ -1,27 +1,17 @@
 package prototypefys;
 
 import javafx.application.Application;
-import javafx.beans.property.ReadOnlyStringWrapper;
+
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
-import javafx.geometry.Insets;
-import javafx.geometry.Pos;
+
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
-import javafx.scene.control.TableColumn;
-import javafx.scene.control.TableView;
-import javafx.scene.control.TextField;
-import javafx.scene.image.ImageView;
-import javafx.scene.layout.ColumnConstraints;
+
 import javafx.scene.layout.GridPane;
-import javafx.scene.layout.HBox;
-import javafx.scene.layout.Pane;
-import javafx.scene.layout.StackPane;
-import javafx.scene.text.Text;
+
 import javafx.stage.Stage;
-import nl.hva.hboict.sql.DataRow;
-import nl.hva.hboict.sql.DataTable;
-import nl.hva.hboict.sql.SQLDataBase;
+
 
 /**
  * jasdhakjsdjkas
