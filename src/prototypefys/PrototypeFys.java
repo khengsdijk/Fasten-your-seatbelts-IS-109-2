@@ -9,6 +9,7 @@ import javafx.scene.Scene;
 import javafx.scene.control.Button;
 
 import javafx.scene.layout.GridPane;
+import javafx.scene.layout.HBox;
 
 import javafx.stage.Stage;
 
@@ -30,15 +31,16 @@ public class PrototypeFys extends Application {
         
         BagageCatalogue cataloog = new BagageCatalogue(); 
         GridPane scherm2 = cataloog.MaakCatalogue();
-    
-        
         
         submitCase submit = new submitCase();
         GridPane scherm4 = submit.MakeSubmitScreen();
         
+        HomeScreen homescherm = new HomeScreen();
+        
+        HBox scherm5 = homescherm.maakhomescreen();
     
     Scene scene = new Scene(scherm, 900, 800);
-    Scene scene2 = new Scene(scherm2, 900, 800);    
+    Scene scene2 = new Scene(scherm5, 900, 800);    
     
         primaryStage.setTitle("loginscherm test");
         primaryStage.setScene(scene);
