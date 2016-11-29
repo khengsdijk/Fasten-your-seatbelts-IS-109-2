@@ -29,8 +29,6 @@ import nl.hva.hboict.sql.SQLDataBase;
  */
 public class PrototypeFys extends Application {
     
-    // KUT GITHUB
-    // nazi github
     public static void main(String[] args) {
         launch(args);
     }
@@ -43,14 +41,13 @@ public class PrototypeFys extends Application {
         BagageCatalogue cataloog = new BagageCatalogue(); 
         GridPane scherm2 = cataloog.MaakCatalogue();
     
-        ReportGeneration rapport = new ReportGeneration();
-        GridPane scherm3 = rapport.MakeReportScreen();
+        
         
         submitCase submit = new submitCase();
         GridPane scherm4 = submit.MakeSubmitScreen();
         
     
-    Scene scene = new Scene(scherm3, 900, 800);
+    Scene scene = new Scene(scherm, 900, 800);
     Scene scene2 = new Scene(scherm2, 900, 800);    
     
         primaryStage.setTitle("loginscherm test");
