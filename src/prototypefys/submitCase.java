@@ -167,13 +167,13 @@ public class submitCase {
         grid.add(addNotesT, 25, 30);
         addNotesT.setPrefSize(80, 80);
         
-        ImageView Calendar = new ImageView("/Resources/Calendar-icon.png");
+        ImageView Calendar = new ImageView("/resources/Calendar-icon.png");
         Calendar.setFitHeight(30);
         Calendar.setFitWidth(30);
         
         grid.add(Calendar, 26, 20);
         
-        ImageView Calendar2 = new ImageView("/Resources/Calendar-icon.png");
+        ImageView Calendar2 = new ImageView("/resources/Calendar-icon.png");
         Calendar2.setFitHeight(30);
         Calendar2.setFitWidth(30);
         

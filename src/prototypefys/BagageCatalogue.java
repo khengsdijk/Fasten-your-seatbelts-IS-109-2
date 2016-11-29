@@ -83,7 +83,10 @@ public class BagageCatalogue {
             public void handle(ActionEvent event) {
                 
                 String output = (String) comboBox.getValue();
-                System.out.println(output);
+                
+                dataBase.executeDataTableQuery("SELECT " +  output + " FROM bagage");
+                
+                
             }
         });
         
