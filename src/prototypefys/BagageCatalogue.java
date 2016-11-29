@@ -26,6 +26,20 @@ import nl.hva.hboict.sql.SQLDataBase;
  */
 public class BagageCatalogue {
 
+    
+    /**
+     * Onzin comment
+     * 
+     * 
+     * 
+     * 
+     * 
+     * 
+     * 
+     * 
+     * Heil Hitler
+     */
+    
     BagageCatalogue() {
     }
     
