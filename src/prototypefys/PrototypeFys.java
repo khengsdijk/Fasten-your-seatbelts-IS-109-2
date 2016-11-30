@@ -35,8 +35,8 @@ public class PrototypeFys extends Application {
         submitCase submit = new submitCase();
         GridPane scherm4 = submit.MakeSubmitScreen();
         
+        // het homescreen wordt gemaakt
         HomeScreen homescherm = new HomeScreen();
-        
         HBox scherm5 = homescherm.maakhomescreen();
     
     Scene scene = new Scene(scherm, 900, 800);
