@@ -23,10 +23,10 @@ public class LoginScherm {
 
     }
     
-    public final String DB_NAME = "MyAirline";
-    public final String DB_SERVER = "localhost:3306";
-    public final String DB_ACCOUNT = "beheerder";
-    public final String DB_PASSWORD = "nooitgedacht";
+    public final String DB_NAME = "fys";
+    public final String DB_SERVER = "it95.nl:3306";
+    public final String DB_ACCOUNT = "fys";
+    public final String DB_PASSWORD = "ESCXZoaIlK07pwUS";
 
     public GridPane MaakHetScherm() {
         
