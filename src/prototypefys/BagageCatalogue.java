@@ -30,14 +30,6 @@ public class BagageCatalogue {
     /**
      * Onzin comment
      * 
-     * 
-     * 
-     * 
-     * 
-     * 
-     * 
-     * 
-     * Heil Hitler
      */
     
     BagageCatalogue() {
