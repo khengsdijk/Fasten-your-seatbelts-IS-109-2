@@ -8,7 +8,7 @@ import javafx.scene.control.Button;
 import javafx.scene.control.TextField;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.GridPane;
-import javafx.scene.layout.Pane;
+import javafx.scene.layout.HBox;
 import javafx.scene.text.Text;
 
 /**
@@ -27,6 +27,11 @@ public class LoginScherm {
     public final String DB_SERVER = "it95.nl:3306";
     public final String DB_ACCOUNT = "fys";
     public final String DB_PASSWORD = "ESCXZoaIlK07pwUS";
+    
+    HomeScreen nieuwscherm = new HomeScreen();
+    HBox homescreen = nieuwscherm.maakhomescreen();
+    
+    Rootpane rootpane = new Rootpane();
 
     public GridPane MaakHetScherm() {
         
@@ -61,13 +66,28 @@ public class LoginScherm {
         root.add(text2, 1, 2);
         root.setStyle("-fx-background-color: #15EA4B;");
         
+        Button login = new Button();
+        login.setText("Login");
+        login.setStyle("-fx-background-color: #F42BA0;-fx-text-fill:#FAFA4A");
+        login.setOnAction(new EventHandler<ActionEvent>() {
+            @Override
+            public void handle(ActionEvent event) {
+                
+                rootpane.addnewpane(homescreen);
+            }
+        });
+        
+        root.add(login, 0 , 3);
+        
         
         
         return root;
     }
     
-    public void VoegKnopToe(GridPane scherm, Button Knop){
-        
-        scherm.add(Knop, 0, 3); 
-    }
+    
+   
+    
+    public void nieuwscherm(){
+       
+   }
 }
