@@ -10,15 +10,20 @@ package prototypefys;
  * @author Koen Hengsdijk
  */
 
-import javafx.application.Application;
+import javafx.event.ActionEvent;
+import javafx.event.EventHandler;
 import javafx.geometry.Pos;
-import javafx.scene.Scene;
 import javafx.scene.control.Button;
+import javafx.scene.layout.GridPane;
 import javafx.scene.layout.HBox;
 import javafx.scene.layout.VBox;
-import javafx.stage.Stage;
 
 public class HomeScreen {
+    
+    Rootpane rootpane = new Rootpane();
+    
+    BagageCatalogue scherm2 = new BagageCatalogue();
+    GridPane cataloog = scherm2.MaakCatalogue();
     
     HomeScreen(){
         
@@ -35,6 +40,16 @@ public class HomeScreen {
 
             Button bt_VEC = new Button("View Existing Case");
             Button bt_VBC = new Button("View Baggage Catalogue ");
+            bt_VBC.setOnAction(new EventHandler<ActionEvent>() {
+            @Override
+            public void handle(ActionEvent event) {
+                
+                rootpane.addnewpane(cataloog);
+            }
+            });
+            
+            
+            
             Button bt_RFB = new Button("Report Found Baggage ");
             Button bt_RLB = new Button("Report Lost Baggage ");
             Button bt_OPT = new Button("Options ");

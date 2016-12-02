@@ -40,15 +40,18 @@ public class BagageCatalogue {
     public final String DB_ACCOUNT = "fys";
     public final String DB_PASSWORD = "ESCXZoaIlK07pwUS";
 
-    public GridPane MaakCatalogue() {
-        
-         // setup a connection to MyAirline database on my local server
+    
+      // setup a connection to MyAirline database on my local server
         SQLDataBase dataBase
                 = new SQLDataBase(DB_NAME, DB_SERVER, DB_ACCOUNT, DB_PASSWORD);
         
         // get a table of airport information from the database
         DataTable airportData
                 = dataBase.executeDataTableQuery("SELECT * FROM bagage");
+    
+    public GridPane MaakCatalogue() {
+        
+       
         
         GridPane root = new GridPane();
         root.getColumnConstraints().add(new ColumnConstraints(200));
@@ -82,16 +85,18 @@ public class BagageCatalogue {
         "Flight Code"
                  );
         final ComboBox comboBox = new ComboBox(options);
-        String text;
         Button ZoekTabel = new Button("Search");
         ZoekTabel.setOnAction(new EventHandler<ActionEvent>() {
             @Override
             public void handle(ActionEvent event) {
                 
                 String output = (String) comboBox.getValue();
+                String zoekConditie = (String) tekst.getText();
                 
-                dataBase.executeDataTableQuery("SELECT " +  output + " FROM bagage");
+                airportData = dataBase.executeDataTableQuery("SELECT * FROM bagage "
+                    + "WHERE " + output + " = " + "'" + zoekConditie + "'");
                 
+                root.add(createJavaFXReadOnlyDataTableView(airportData), 2 , 3 , 2, 3);
                 
             }
         });
