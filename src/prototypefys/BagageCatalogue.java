@@ -101,6 +101,15 @@ public class BagageCatalogue {
             }
         });
         
+        Button reset = new Button("show all");
+        reset.setMinSize(70, 20);
+        reset.setOnAction(new EventHandler<ActionEvent>() {
+            @Override
+            public void handle(ActionEvent event){
+               airportData = dataBase.executeDataTableQuery("Select * FROM bagage");
+               root.add(createJavaFXReadOnlyDataTableView(airportData), 2 , 3 , 2, 3);
+            }
+        });
         
         Button buttonCurrent = new Button("main menu");
         buttonCurrent.setPrefSize(100, 20);
@@ -108,11 +117,15 @@ public class BagageCatalogue {
         Button buttonProjected = new Button("options");
         buttonProjected.setPrefSize(100, 20);
         hbox.getChildren().addAll(buttonCurrent, buttonProjected);
-
+        
+        HBox tabelKnoppen = new HBox();
+        tabelKnoppen.getChildren().addAll(ZoekTabel, reset);
+        tabelKnoppen.setSpacing(10);
         Zoekscherm.add(tekst, 1, 1);
         Zoekscherm.add(comboBox, 1, 0);
-        Zoekscherm.add(ZoekTabel, 1, 2);
-        
+//        Zoekscherm.add(ZoekTabel, 1, 2);
+//        Zoekscherm.add(reset, 2, 2);
+        Zoekscherm.add(tabelKnoppen, 1, 2);
         root.add(EmptyPane, 0, 1);
         root.add(Zoekscherm, 0 , 3);
         root.add(hbox, 0, 2);
