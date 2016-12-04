@@ -30,7 +30,7 @@ public class ReportGeneration {
         
         // get a table of airport information from the database
         DataTable airportData
-                = dataBase.executeDataTableQuery("SELECT * FROM bagage");
+                = dataBase.executeDataTableQuery("SELECT country FROM bagage");
         
         GridPane root = new GridPane();
         
@@ -50,6 +50,8 @@ public class ReportGeneration {
 
         // convert the data to the JavaFX Charts format
         ObservableList<PieChart.Data> airportChartData = FXCollections.observableArrayList();
+        
+        
         for (int i = 0; i < airportData.size(); i++) {
             airportChartData.add(
                 new PieChart.Data(airportData.getString(i, "country"),

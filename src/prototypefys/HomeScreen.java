@@ -25,8 +25,13 @@ public class HomeScreen {
     BagageCatalogue scherm2 = new BagageCatalogue();
     GridPane cataloog = scherm2.MaakCatalogue();
     
+
     viewExistingCase scherm3 = new viewExistingCase();
     GridPane viewcase = scherm3.MaakExistingCase();
+
+    ReportGeneration scherm4 = new ReportGeneration();
+    GridPane rapport = scherm4.MakeReportScreen();
+
     
     HomeScreen(){
         
@@ -42,6 +47,7 @@ public class HomeScreen {
 
 
             Button bt_VEC = new Button("View Existing Case");
+
             bt_VEC.setOnAction(new EventHandler<ActionEvent>() {
             @Override
             public void handle(ActionEvent event) {
@@ -49,6 +55,7 @@ public class HomeScreen {
                 rootpane.addnewpane(viewcase);
             }
             });
+
             Button bt_VBC = new Button("View Baggage Catalogue ");
             bt_VBC.setOnAction(new EventHandler<ActionEvent>() {
             @Override
@@ -64,14 +71,24 @@ public class HomeScreen {
             Button bt_RLB = new Button("Report Lost Baggage ");
             Button bt_OPT = new Button("Options ");
             Button bt_LOG = new Button("Logout ");
-
+            Button bt_STA = new Button("Statistics");
+            
+            
+            
             vbox1.getChildren().add(bt_VEC);
             vbox1.getChildren().add(bt_VBC);
             vbox1.getChildren().add(bt_RFB);
             vbox1.getChildren().add(bt_RLB);
             vbox1.getChildren().add(bt_OPT);
             vbox1.getChildren().add(bt_LOG);
-
+            vbox1.getChildren().add(bt_STA);
+            bt_STA.setOnAction(new EventHandler<ActionEvent>() {
+            @Override
+            public void handle(ActionEvent event) {
+                
+                rootpane.addnewpane(rapport);
+            }
+            });
         
 
         hbox.getChildren().addAll(vbox1);
