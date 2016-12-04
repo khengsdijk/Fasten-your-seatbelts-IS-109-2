@@ -1,5 +1,6 @@
 package prototypefys;
 
+import java.util.Collections;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.scene.chart.PieChart;
@@ -51,16 +52,16 @@ public class ReportGeneration {
         // convert the data to the JavaFX Charts format
         ObservableList<PieChart.Data> airportChartData = FXCollections.observableArrayList();
         
-        
-        for (int i = 0; i < airportData.size(); i++) {
-            airportChartData.add(
-                new PieChart.Data(airportData.getString(i, "country"),
-                   2));
-        }
+        int spain = Collections.frequency(airportChartData, "spain");
+        int netherlands = Collections.frequency(airportChartData, "netherlands");
+        int turkey = Collections.frequency(airportChartData, "turkey");
+        airportChartData.add(
+                new PieChart.Data(("spain"), spain),
+                new PieChart.Data(("netherlands"), netherlands));
 
         // build the JavaFX chart
         PieChart chart = new PieChart(airportChartData);
-        chart.setTitle("Luchthaven Vlucht Frequenties");
+        chart.setTitle("verloren koffers per land");
 
         return chart;
     }
