@@ -52,9 +52,9 @@ public class viewExistingCase {
         
         
 
-        Button btn1 = new Button("View baggage catalogue");
+        Button btn1 = new Button("Search case ID#");
         grid.add(btn1, 1, 2);
-        btn1.setText("View baggage catalogue");
+        btn1.setText("Search");
         btn1.setOnAction(new EventHandler<ActionEvent>() {
 
             @Override
@@ -64,9 +64,20 @@ public class viewExistingCase {
         });
         
         Button btn2 = new Button("View baggage catalogue");
-        grid.add(btn2, 1, 2);
-        btn2.setText("hoi");
+        grid.add(btn2, 2, 1);
+        btn2.setText("Back");
         btn2.setOnAction(new EventHandler<ActionEvent>() {
+
+        @Override
+        public void handle(ActionEvent event) {
+              System.out.println("X");
+            }
+        });
+        
+        Button btn3 = new Button("View options");
+        grid.add(btn3, 2, 2);
+        btn3.setText("Options");
+        btn3.setOnAction(new EventHandler<ActionEvent>() {
 
         @Override
         public void handle(ActionEvent event) {
