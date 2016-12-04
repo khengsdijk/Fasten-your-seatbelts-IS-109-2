@@ -55,7 +55,7 @@ public class ReportGeneration {
         for (int i = 0; i < airportData.size(); i++) {
             airportChartData.add(
                 new PieChart.Data(airportData.getString(i, "country"),
-                    airportData.getInt(i, "date_lost")));
+                   2));
         }
 
         // build the JavaFX chart
