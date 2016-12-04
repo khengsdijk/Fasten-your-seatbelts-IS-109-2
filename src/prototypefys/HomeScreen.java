@@ -25,6 +25,9 @@ public class HomeScreen {
     BagageCatalogue scherm2 = new BagageCatalogue();
     GridPane cataloog = scherm2.MaakCatalogue();
     
+    viewExistingCase scherm3 = new viewExistingCase();
+    GridPane viewcase = scherm3.MaakExistingCase();
+    
     HomeScreen(){
         
     }
@@ -39,6 +42,13 @@ public class HomeScreen {
 
 
             Button bt_VEC = new Button("View Existing Case");
+            bt_VEC.setOnAction(new EventHandler<ActionEvent>() {
+            @Override
+            public void handle(ActionEvent event) {
+                
+                rootpane.addnewpane(viewcase);
+            }
+            });
             Button bt_VBC = new Button("View Baggage Catalogue ");
             bt_VBC.setOnAction(new EventHandler<ActionEvent>() {
             @Override

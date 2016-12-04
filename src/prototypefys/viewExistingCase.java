@@ -14,10 +14,10 @@ import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 import javafx.scene.layout.GridPane;
+import javafx.scene.layout.Pane;
 import javafx.scene.text.Font;
 import javafx.scene.text.FontWeight;
 import javafx.scene.text.Text;
-import javafx.stage.Stage;
 
 /**
  *
@@ -29,8 +29,8 @@ public class viewExistingCase {
         
     }
     
-    public void start(Stage primaryStage){
-        primaryStage.setTitle("JavaFX Welcome");
+    public GridPane MaakExistingCase(){
+        
 
         GridPane grid = new GridPane();
         grid.setAlignment(Pos.CENTER);
@@ -51,8 +51,7 @@ public class viewExistingCase {
         Scene scene = new Scene(grid, 300, 275);
         
         
-        primaryStage.setScene(scene);
-        primaryStage.show();
+
         Button btn1 = new Button("View baggage catalogue");
         grid.add(btn1, 1, 2);
         btn1.setText("View baggage catalogue");
@@ -76,7 +75,7 @@ public class viewExistingCase {
         });
         
 
-        
+  return grid;       
 }
     
 }
