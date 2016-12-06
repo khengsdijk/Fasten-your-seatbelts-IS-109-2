@@ -22,9 +22,11 @@ public class HomeScreen {
     
     Rootpane rootpane = new Rootpane();
     
+    private static LoginScherm scherm1 = new LoginScherm();
+   private static GridPane loginScherm = scherm1.MaakHetScherm();
+    
     BagageCatalogue scherm2 = new BagageCatalogue();
     GridPane cataloog = scherm2.MaakCatalogue();
-    
 
     viewExistingCase scherm3 = new viewExistingCase();
     GridPane viewcase = scherm3.MaakExistingCase();
@@ -35,6 +37,8 @@ public class HomeScreen {
     ReportLost scherm5 = new ReportLost();
     GridPane ReportLost = scherm5.MakeLostReport();
 
+    
+    
 //    ReportGeneration scherm4 = new ReportGeneration();
 //    GridPane rapport = scherm4.MakeReportScreen();
 
@@ -85,13 +89,22 @@ public class HomeScreen {
             @Override
             public void handle(ActionEvent event) {
                 
-                rootpane.addnewpane(submitCase);
+                rootpane.addnewpane(ReportLost);
             }
             });
           
+            Button bt_LOG = new Button("Logout ");
+            bt_LOG.setOnAction(new EventHandler<ActionEvent>() {
+            @Override
+            public void handle(ActionEvent event) {
+                
+                rootpane.addnewpane(loginScherm);
+            }
+            });
+                
                 
             Button bt_OPT = new Button("Options ");
-            Button bt_LOG = new Button("Logout ");
+            
             Button bt_STA = new Button("Statistics");
             
             
