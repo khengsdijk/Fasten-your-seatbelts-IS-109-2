@@ -23,7 +23,7 @@ public class HomeScreen {
     Rootpane rootpane = new Rootpane();
     
     private static LoginScherm scherm1 = new LoginScherm();
-   private static GridPane loginScherm = scherm1.MaakHetScherm();
+    private static GridPane loginScherm = scherm1.MaakHetScherm();
     
     BagageCatalogue scherm2 = new BagageCatalogue();
     GridPane cataloog = scherm2.MaakCatalogue();
@@ -36,6 +36,9 @@ public class HomeScreen {
     
     ReportLost scherm5 = new ReportLost();
     GridPane ReportLost = scherm5.MakeLostReport();
+    
+    adminScherm scherm6 = new adminScherm();
+    HBox adminScherm = scherm6.maakAdminScherm();
 
     
     
@@ -57,7 +60,6 @@ public class HomeScreen {
 
 
             Button bt_VEC = new Button("View Existing Case");
-
             bt_VEC.setOnAction(new EventHandler<ActionEvent>() {
             @Override
             public void handle(ActionEvent event) {
@@ -101,6 +103,16 @@ public class HomeScreen {
                 rootpane.addnewpane(loginScherm);
             }
             });
+            
+            Button bt_ADM = new Button("ADMIN GODMODE!!");
+
+            bt_ADM.setOnAction(new EventHandler<ActionEvent>() {
+            @Override
+            public void handle(ActionEvent event) {
+                
+                rootpane.addnewpane(adminScherm);
+            }
+            });
                 
                 
             Button bt_OPT = new Button("Options ");
@@ -114,8 +126,9 @@ public class HomeScreen {
             vbox1.getChildren().add(bt_RFB);
             vbox1.getChildren().add(bt_RLB);
             vbox1.getChildren().add(bt_OPT);
-            vbox1.getChildren().add(bt_LOG);
             vbox1.getChildren().add(bt_STA);
+            vbox1.getChildren().add(bt_LOG);
+            vbox1.getChildren().add(bt_ADM);
             bt_STA.setOnAction(new EventHandler<ActionEvent>() {
             @Override
             public void handle(ActionEvent event) {
