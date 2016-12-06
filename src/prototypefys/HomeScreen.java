@@ -120,7 +120,7 @@ public class HomeScreen {
             bt_STA.setStyle("-fx-base:darkred;-fx-border-color:white");   
             bt_STA.setPrefSize(120, 50);
             
-            
+            hbox.setStyle("-fx-background-color: white");
             
             vbox1.getChildren().add(bt_VEC);
             vbox1.getChildren().add(bt_VBC);

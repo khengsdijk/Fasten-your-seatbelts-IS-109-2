@@ -45,7 +45,7 @@ public class viewExistingCase {
         grid.setPadding(new Insets(25, 25, 25, 25));
 
         Text scenetitle = new Text("Enter Case ID#");
-        scenetitle.setFont(Font.font("Tahoma", FontWeight.NORMAL, 20));
+        scenetitle.setFont(Font.font("Verdana", FontWeight.NORMAL, 20));
         grid.add(scenetitle, 0, 0, 2, 1);
 
         Label userName = new Label("Case ID#:");
@@ -54,6 +54,8 @@ public class viewExistingCase {
         TextField userTextField = new TextField();
         grid.add(userTextField, 1, 1);
 
+        grid.setStyle("-fx-background-color: white");
+        
         Scene scene = new Scene(grid, 300, 275);
         
         
@@ -61,6 +63,8 @@ public class viewExistingCase {
         Button btn1 = new Button("Search case ID#");
         grid.add(btn1, 1, 2);
         btn1.setText("Search");
+        btn1.setPrefSize(150, 20);
+        btn1.setStyle("-fx-base:darkred;-fx-border-color:white");
         btn1.setOnAction(new EventHandler<ActionEvent>() {
 
             @Override
@@ -72,6 +76,8 @@ public class viewExistingCase {
         Button btn2 = new Button("View baggage catalogue");
         grid.add(btn2, 2, 1);
         btn2.setText("Back");
+        btn2.setPrefSize(80, 20);
+        btn2.setStyle("-fx-base:darkred;-fx-border-color:white");
         btn2.setOnAction(new EventHandler<ActionEvent>() {
 
         @Override
@@ -83,6 +89,8 @@ public class viewExistingCase {
         Button btn3 = new Button("View options");
         grid.add(btn3, 2, 2);
         btn3.setText("Options");
+        btn3.setPrefSize(80, 20);
+        btn3.setStyle("-fx-base:darkred;-fx-border-color:white");
         btn3.setOnAction(new EventHandler<ActionEvent>() {
 
         @Override
