@@ -41,7 +41,7 @@ public class ReportGeneration {
         return root;
     }
     
-    
+        
     
     
     
@@ -57,7 +57,7 @@ public class ReportGeneration {
                 new PieChart.Data("Pears", 22),
                 new PieChart.Data("Apples", 30));
         final PieChart chart = new PieChart(pieChartData);
-        chart.setTitle("Imported Fruits");
+        chart.setTitle("lost bagage per country");
 
         return chart;
     }
