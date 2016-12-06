@@ -26,6 +26,7 @@ import javafx.stage.Stage;
 
 /**
  *
+ * @author Michael Cheung
  */
 public class DisplayEmployeeLog extends Application {
     
