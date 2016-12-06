@@ -194,7 +194,11 @@ public class ReportLost {
         
         grid.add(Calendar2, 46, 28);
         
-        
+        ImageView Corendon = new ImageView("/resources/corendon.jpg");
+        Corendon.setFitHeight(100);
+        Corendon.setFitWidth(300);
+
+        grid.add(Corendon, 1, 1, 10, 10);
         
         // Toevoegen van buttons
         grid.getChildren().addAll(btn, btn2, btnS);
