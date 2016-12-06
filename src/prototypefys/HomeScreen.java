@@ -36,9 +36,13 @@ public class HomeScreen {
     
     ReportLost scherm5 = new ReportLost();
     GridPane ReportLost = scherm5.MakeLostReport();
+
     
     adminScherm scherm6 = new adminScherm();
     HBox adminScherm = scherm6.maakAdminScherm();
+
+
+    // micheal is hitleer
 
     
     
@@ -58,8 +62,13 @@ public class HomeScreen {
         VBox vbox1 = new VBox(20);
         vbox1.setAlignment(Pos.CENTER);
 
-
+        
             Button bt_VEC = new Button("View Existing Case");
+
+
+            bt_VEC.setStyle("-fx-base:darkred;-fx-border-color:white");
+            bt_VEC.setPrefSize(160, 50);
+
             bt_VEC.setOnAction(new EventHandler<ActionEvent>() {
             @Override
             public void handle(ActionEvent event) {
@@ -69,6 +78,8 @@ public class HomeScreen {
             });
 
             Button bt_VBC = new Button("View Baggage Catalogue ");
+            bt_VBC.setStyle("-fx-base:darkred;-fx-border-color:white");
+            bt_VBC.setPrefSize(160, 50);
             bt_VBC.setOnAction(new EventHandler<ActionEvent>() {
             @Override
             public void handle(ActionEvent event) {
@@ -78,6 +89,8 @@ public class HomeScreen {
             });
     
             Button bt_RFB = new Button("Report Found Baggage ");
+            bt_RFB.setStyle("-fx-base:darkred;-fx-border-color:white");  
+            bt_RFB.setPrefSize(160, 50);
             bt_RFB.setOnAction(new EventHandler<ActionEvent>() {
             @Override
             public void handle(ActionEvent event) {
@@ -87,6 +100,8 @@ public class HomeScreen {
             });
             
             Button bt_RLB = new Button("Report Lost Baggage ");
+            bt_RLB.setStyle("-fx-base:darkred;-fx-border-color:white"); 
+            bt_RLB.setPrefSize(160, 50);
             bt_RLB.setOnAction(new EventHandler<ActionEvent>() {
             @Override
             public void handle(ActionEvent event) {
@@ -107,6 +122,8 @@ public class HomeScreen {
             });
                         
             Button bt_LOG = new Button("Logout ");
+            bt_LOG.setStyle("-fx-base:darkred;-fx-border-color:white");  
+            bt_LOG.setPrefSize(120, 50);
             bt_LOG.setOnAction(new EventHandler<ActionEvent>() {
             @Override
             public void handle(ActionEvent event) {
@@ -116,8 +133,12 @@ public class HomeScreen {
             });    
                 
             Button bt_OPT = new Button("Options ");
+            bt_OPT.setStyle("-fx-base:darkred;-fx-border-color:white");   
+            bt_OPT.setPrefSize(120, 50);
             
             Button bt_STA = new Button("Statistics");
+            bt_STA.setStyle("-fx-base:darkred;-fx-border-color:white");   
+            bt_STA.setPrefSize(120, 50);
             
             hbox.setStyle("-fx-background-color: #eaaf00;");
             

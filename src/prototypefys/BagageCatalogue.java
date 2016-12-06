@@ -66,7 +66,7 @@ public class BagageCatalogue {
         Zoekscherm.setVgap(10);
         Zoekscherm.setPrefSize(150, 100);
         Zoekscherm.setMaxSize(150, 100);
-        Zoekscherm.setStyle("-fx-base:orange;-fx-border-color:black");
+        Zoekscherm.setStyle("-fx-base:darkred;-fx-border-color:white");
         Zoekscherm.setAlignment(Pos.CENTER);
         Zoekscherm.setPrefSize(250, 250);
         Zoekscherm.setMaxSize(250, 250);
@@ -76,7 +76,8 @@ public class BagageCatalogue {
         
         StackPane EmptyPane2 = new StackPane();
         EmptyPane2.setPrefSize(50, 50);
-        TextField tekst = new TextField("search");
+        TextField tekst = new TextField();
+        tekst.setPromptText("Search");
 
         HBox hbox = new HBox();
         hbox.setPadding(new Insets(5, 12, 5, 12));
@@ -105,7 +106,7 @@ public class BagageCatalogue {
             }
         });
         
-        Button reset = new Button("show all");
+        Button reset = new Button("Show all");
         reset.setMinSize(70, 20);
         reset.setOnAction(new EventHandler<ActionEvent>() {
             @Override
@@ -115,7 +116,7 @@ public class BagageCatalogue {
             }
         });
         
-        Button buttonCurrent = new Button("main menu");
+        Button buttonCurrent = new Button("Main Menu");
         buttonCurrent.setOnAction(new EventHandler<ActionEvent>() {
             @Override
             public void handle(ActionEvent event) {
@@ -125,7 +126,7 @@ public class BagageCatalogue {
             });
         buttonCurrent.setPrefSize(100, 20);
 
-        Button buttonProjected = new Button("options");
+        Button buttonProjected = new Button("Options");
         buttonProjected.setPrefSize(100, 20);
         hbox.getChildren().addAll(buttonCurrent, buttonProjected);
         
