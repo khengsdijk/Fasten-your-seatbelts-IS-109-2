@@ -68,7 +68,7 @@ public class LoginScherm {
         
         Button login = new Button();
         login.setText("Login");
-        login.setStyle("-fx-background-color: #F42BA0;-fx-text-fill:#FAFA4A");
+        login.setStyle("-fx-background-color: #757D7D;-fx-text-fill:#FAFA4A");
         login.setOnAction(new EventHandler<ActionEvent>() {
             @Override
             public void handle(ActionEvent event) {

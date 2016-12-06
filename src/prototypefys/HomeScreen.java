@@ -35,8 +35,8 @@ public class HomeScreen {
     ReportLost scherm5 = new ReportLost();
     GridPane ReportLost = scherm5.MakeLostReport();
 
-//    ReportGeneration scherm4 = new ReportGeneration();
-//    GridPane rapport = scherm4.MakeReportScreen();
+    ReportGeneration scherm6 = new ReportGeneration();
+    GridPane rapport = scherm6.MakeReportScreen();
 
     
     HomeScreen(){
@@ -107,7 +107,7 @@ public class HomeScreen {
             @Override
             public void handle(ActionEvent event) {
                 
-//                rootpane.addnewpane(rapport);
+                rootpane.addnewpane(rapport);
             }
             });
         
