@@ -28,6 +28,12 @@ public class HomeScreen {
 
     viewExistingCase scherm3 = new viewExistingCase();
     GridPane viewcase = scherm3.MaakExistingCase();
+    
+    submitCase scherm4 = new submitCase();
+    GridPane submitCase = scherm4.MakeSubmitScreen();
+    
+    ReportLost scherm5 = new ReportLost();
+    GridPane ReportLost = scherm5.MakeLostReport();
 
 //    ReportGeneration scherm4 = new ReportGeneration();
 //    GridPane rapport = scherm4.MakeReportScreen();
@@ -64,11 +70,26 @@ public class HomeScreen {
                 rootpane.addnewpane(cataloog);
             }
             });
-            
-            
-            
+    
             Button bt_RFB = new Button("Report Found Baggage ");
+            bt_RFB.setOnAction(new EventHandler<ActionEvent>() {
+            @Override
+            public void handle(ActionEvent event) {
+                
+                rootpane.addnewpane(submitCase);
+            }
+            });
+            
             Button bt_RLB = new Button("Report Lost Baggage ");
+            bt_RLB.setOnAction(new EventHandler<ActionEvent>() {
+            @Override
+            public void handle(ActionEvent event) {
+                
+                rootpane.addnewpane(submitCase);
+            }
+            });
+          
+                
             Button bt_OPT = new Button("Options ");
             Button bt_LOG = new Button("Logout ");
             Button bt_STA = new Button("Statistics");
