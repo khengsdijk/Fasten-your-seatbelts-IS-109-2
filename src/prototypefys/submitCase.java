@@ -1,5 +1,7 @@
 package prototypefys;
 
+import javafx.event.ActionEvent;
+import javafx.event.EventHandler;
 import javafx.geometry.Insets;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
@@ -15,6 +17,10 @@ import javafx.scene.text.FontWeight;
  * @author Koen Hengsdijk
  */
 public class submitCase {
+    Rootpane rootpane = new Rootpane();
+    
+    private static HomeScreen nieuwscherm = new HomeScreen();
+    private static HBox homescreen = nieuwscherm.maakhomescreen();
     
     submitCase(){
         
@@ -25,6 +31,8 @@ public class submitCase {
         Button btn;
         Button btn2;
         Button btnS;
+        
+        
         
          HBox Menu = new HBox();
         // ------------------------------
@@ -59,6 +67,14 @@ public class submitCase {
 
         
         grid.setStyle("-fx-background-color: white");
+        
+        btn.setOnAction(new EventHandler<ActionEvent>() {
+            @Override
+            public void handle(ActionEvent event) {
+                
+                rootpane.addnewpane(homescreen);
+            }
+            });
         
         Label Case = new Label("Case Data");
         Case.setFont(Font.font("Verdana", FontWeight.BOLD, 14));
