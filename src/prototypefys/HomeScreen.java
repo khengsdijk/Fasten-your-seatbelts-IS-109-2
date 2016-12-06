@@ -29,8 +29,8 @@ public class HomeScreen {
     viewExistingCase scherm3 = new viewExistingCase();
     GridPane viewcase = scherm3.MaakExistingCase();
 
-    ReportGeneration scherm4 = new ReportGeneration();
-    GridPane rapport = scherm4.MakeReportScreen();
+//    ReportGeneration scherm4 = new ReportGeneration();
+//    GridPane rapport = scherm4.MakeReportScreen();
 
     
     HomeScreen(){
@@ -86,7 +86,7 @@ public class HomeScreen {
             @Override
             public void handle(ActionEvent event) {
                 
-                rootpane.addnewpane(rapport);
+//                rootpane.addnewpane(rapport);
             }
             });
         
