@@ -31,6 +31,10 @@ public class BagageCatalogue {
      * Onzin comment
      * 
      */
+    Rootpane rootpane = new Rootpane();
+    
+    private static HomeScreen nieuwscherm = new HomeScreen();
+    private static HBox homescreen = nieuwscherm.maakhomescreen();
     
     BagageCatalogue() {
     }
@@ -112,6 +116,13 @@ public class BagageCatalogue {
         });
         
         Button buttonCurrent = new Button("main menu");
+        buttonCurrent.setOnAction(new EventHandler<ActionEvent>() {
+            @Override
+            public void handle(ActionEvent event) {
+                
+                rootpane.addnewpane(homescreen);
+            }
+            });
         buttonCurrent.setPrefSize(100, 20);
 
         Button buttonProjected = new Button("options");
