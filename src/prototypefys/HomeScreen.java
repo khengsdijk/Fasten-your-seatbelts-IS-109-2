@@ -95,17 +95,9 @@ public class HomeScreen {
             }
             });
           
-            Button bt_LOG = new Button("Logout ");
-            bt_LOG.setOnAction(new EventHandler<ActionEvent>() {
-            @Override
-            public void handle(ActionEvent event) {
-                
-                rootpane.addnewpane(loginScherm);
-            }
-            });
-            
-            Button bt_ADM = new Button("ADMIN GODMODE!!");
 
+            
+            Button bt_ADM = new Button("Admin");
             bt_ADM.setOnAction(new EventHandler<ActionEvent>() {
             @Override
             public void handle(ActionEvent event) {
@@ -113,13 +105,31 @@ public class HomeScreen {
                 rootpane.addnewpane(adminScherm);
             }
             });
+                        
+            Button bt_LOG = new Button("Logout ");
+            bt_LOG.setOnAction(new EventHandler<ActionEvent>() {
+            @Override
+            public void handle(ActionEvent event) {
                 
+                rootpane.addnewpane(loginScherm);
+            }
+            });    
                 
             Button bt_OPT = new Button("Options ");
             
             Button bt_STA = new Button("Statistics");
             
+            hbox.setStyle("-fx-background-color: #eaaf00;");
             
+            bt_VEC.setPrefSize(180, 20);
+            bt_VBC.setPrefSize(180, 20);
+            bt_RFB.setPrefSize(180, 20);
+            bt_RLB.setPrefSize(180, 20);
+            bt_OPT.setPrefSize(180, 20);
+            bt_STA.setPrefSize(180, 20);
+            bt_ADM.setPrefSize(180, 20);
+            bt_LOG.setPrefSize(180, 20);
+
             
             vbox1.getChildren().add(bt_VEC);
             vbox1.getChildren().add(bt_VBC);
@@ -127,8 +137,9 @@ public class HomeScreen {
             vbox1.getChildren().add(bt_RLB);
             vbox1.getChildren().add(bt_OPT);
             vbox1.getChildren().add(bt_STA);
-            vbox1.getChildren().add(bt_LOG);
             vbox1.getChildren().add(bt_ADM);
+            vbox1.getChildren().add(bt_LOG);
+
             bt_STA.setOnAction(new EventHandler<ActionEvent>() {
             @Override
             public void handle(ActionEvent event) {

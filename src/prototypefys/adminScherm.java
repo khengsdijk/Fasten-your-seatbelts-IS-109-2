@@ -19,6 +19,10 @@ import javafx.scene.layout.VBox;
  */
 public class adminScherm {
     
+    Rootpane rootpane = new Rootpane();
+    
+    private static HomeScreen nieuwscherm = new HomeScreen();
+    private static HBox homescreen = nieuwscherm.maakhomescreen();    
     
     adminScherm(){
         
@@ -27,7 +31,7 @@ public class adminScherm {
     public HBox maakAdminScherm() {
     
     
-    Rootpane rootpane = new Rootpane();
+
     
         HBox hbox = new HBox(200);
         hbox.setAlignment(Pos.CENTER);
@@ -62,10 +66,19 @@ public class adminScherm {
                 System.out.println("X");
             }
             });
+            
+            Button bt_backButton = new Button("Back ");
+            bt_backButton.setOnAction(new EventHandler<ActionEvent>() {
+             @Override
+             public void handle(ActionEvent event) {
+              rootpane.addnewpane(homescreen);
+            }
+            });
         
             vbox1.getChildren().add(bt_MA);
             vbox1.getChildren().add(bt_VL);
             vbox1.getChildren().add(bt_VDC);
+            vbox1.getChildren().add(bt_backButton);
     
             
         hbox.getChildren().addAll(vbox1);
