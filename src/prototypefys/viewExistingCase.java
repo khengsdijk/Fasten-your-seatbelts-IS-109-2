@@ -14,6 +14,7 @@ import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 import javafx.scene.layout.GridPane;
+import javafx.scene.layout.HBox;
 import javafx.scene.layout.Pane;
 import javafx.scene.text.Font;
 import javafx.scene.text.FontWeight;
@@ -24,6 +25,11 @@ import javafx.scene.text.Text;
  * @author Daniel
  */
 public class viewExistingCase {
+    
+    Rootpane rootpane = new Rootpane();
+    
+    private static HomeScreen nieuwscherm = new HomeScreen();
+    private static HBox homescreen = nieuwscherm.maakhomescreen();
     
     viewExistingCase(){
         
@@ -70,7 +76,7 @@ public class viewExistingCase {
 
         @Override
         public void handle(ActionEvent event) {
-              System.out.println("X");
+              rootpane.addnewpane(homescreen);
             }
         });
         
