@@ -31,7 +31,7 @@ public class BagageCatalogue {
      * Onzin comment
      * 
      */
-    Rootpane rootpane = new Rootpane();
+    private static Rootpane rootpane = new Rootpane();
     
     private static HomeScreen nieuwscherm = new HomeScreen();
     private static HBox homescreen = nieuwscherm.maakhomescreen();
