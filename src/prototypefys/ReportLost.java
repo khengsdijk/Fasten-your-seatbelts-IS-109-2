@@ -18,6 +18,11 @@ import javafx.scene.text.FontWeight;
  */
 public class ReportLost {
     
+    Rootpane rootpane = new Rootpane();
+    
+    private static HomeScreen nieuwscherm = new HomeScreen();
+    private static HBox homescreen = nieuwscherm.maakhomescreen();
+    
     ReportLost(){
         
     }
@@ -61,6 +66,14 @@ public class ReportLost {
 
         
         grid.setStyle("-fx-background-color: white");
+        
+        btn.setOnAction(new EventHandler<ActionEvent>() {
+            @Override
+            public void handle(ActionEvent event) {
+                
+                rootpane.addnewpane(homescreen);
+            }
+            });
         
         Label Case = new Label("Case Data");
         Case.setFont(Font.font("Verdana", FontWeight.BOLD, 14));
