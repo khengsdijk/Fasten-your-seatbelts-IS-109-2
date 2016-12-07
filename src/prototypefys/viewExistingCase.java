@@ -39,7 +39,7 @@ public class viewExistingCase {
  
 
         GridPane grid = new GridPane();
-        grid.setStyle("-fx-background-color: #eaaf00;");
+        grid.setStyle("-fx-background-color: #16302e");
         grid.setAlignment(Pos.CENTER);
         grid.setHgap(10);
         grid.setVgap(10);

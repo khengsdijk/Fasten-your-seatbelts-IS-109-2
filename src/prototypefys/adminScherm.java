@@ -41,6 +41,7 @@ public class adminScherm {
         
                     
             Button bt_MA = new Button("Manage Accounts ");
+            bt_MA.setPrefSize(150, 50);
             bt_MA.setOnAction(new EventHandler<ActionEvent>() {
             @Override
             public void handle(ActionEvent event) {
@@ -50,6 +51,7 @@ public class adminScherm {
             });
             
             Button bt_VL = new Button("View Logs ");
+            bt_VL.setPrefSize(150, 50);
             bt_VL.setOnAction(new EventHandler<ActionEvent>() {
             @Override
             public void handle(ActionEvent event) {
@@ -59,6 +61,7 @@ public class adminScherm {
             });
             
             Button bt_VDC = new Button("View Deleted Cases ");
+            bt_VDC.setPrefSize(150, 50);
             bt_VDC.setOnAction(new EventHandler<ActionEvent>() {
             @Override
             public void handle(ActionEvent event) {
@@ -68,6 +71,7 @@ public class adminScherm {
             });
             
             Button bt_backButton = new Button("Back ");
+            bt_backButton.setPrefSize(150, 50);
             bt_backButton.setOnAction(new EventHandler<ActionEvent>() {
              @Override
              public void handle(ActionEvent event) {
