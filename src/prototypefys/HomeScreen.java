@@ -36,7 +36,7 @@ public class HomeScreen {
     
     ReportLost scherm5 = new ReportLost();
     GridPane ReportLost = scherm5.MakeLostReport();
-    // micheal is hitleer
+
     
     
 //    ReportGeneration scherm4 = new ReportGeneration();
