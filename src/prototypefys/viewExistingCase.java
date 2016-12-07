@@ -36,9 +36,10 @@ public class viewExistingCase {
     }
     
     public GridPane MaakExistingCase(){
-        
+ 
 
         GridPane grid = new GridPane();
+        grid.setStyle("-fx-background-color: #eaaf00;");
         grid.setAlignment(Pos.CENTER);
         grid.setHgap(10);
         grid.setVgap(10);
@@ -59,7 +60,8 @@ public class viewExistingCase {
         
 
         Button btn1 = new Button("Search case ID#");
-        grid.add(btn1, 1, 2);
+        grid.add(btn1, 2, 1);
+        btn1.setPrefSize(100, 20);
         btn1.setText("Search");
         btn1.setOnAction(new EventHandler<ActionEvent>() {
 
@@ -70,7 +72,8 @@ public class viewExistingCase {
         });
         
         Button btn2 = new Button("View baggage catalogue");
-        grid.add(btn2, 2, 1);
+        grid.add(btn2, 1, 2);
+        btn2.setPrefSize(100, 20);
         btn2.setText("Back");
         btn2.setOnAction(new EventHandler<ActionEvent>() {
 
@@ -82,6 +85,7 @@ public class viewExistingCase {
         
         Button btn3 = new Button("View options");
         grid.add(btn3, 2, 2);
+        btn3.setPrefSize(100, 20);
         btn3.setText("Options");
         btn3.setOnAction(new EventHandler<ActionEvent>() {
 
@@ -91,7 +95,7 @@ public class viewExistingCase {
             }
         });
         
-
+//GridPane.setStyle("-fx-background-color: #eaaf00;");
   return grid;       
 }
     
