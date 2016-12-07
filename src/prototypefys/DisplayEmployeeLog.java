@@ -41,7 +41,7 @@ public class DisplayEmployeeLog extends Application {
         FlowPane root = new FlowPane();
         root.setAlignment(Pos.CENTER);
         
-        Scene scene = new Scene(root, 900, 750);
+        Scene scene = new Scene(root, 900, 800);
         
         ObservableList<Logs> logList = FXCollections.observableArrayList(
                 new Logs("001", "Fisher", "Deleted record"), 
