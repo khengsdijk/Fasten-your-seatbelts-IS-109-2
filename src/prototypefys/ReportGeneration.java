@@ -36,7 +36,7 @@ public class ReportGeneration {
         GridPane root = new GridPane();
         
         
-        root.add(createJavaFXChartAirport(airportData), 1, 1);
+        root.add(createJavaFXChartAirport(), 1, 1);
         
         return root;
     }
@@ -47,7 +47,8 @@ public class ReportGeneration {
     
     
     
-    private static PieChart createJavaFXChartAirport(DataTable airportData) {
+    private static PieChart createJavaFXChartAirport() {
+        
 
         ObservableList<PieChart.Data> pieChartData =
                 FXCollections.observableArrayList(
