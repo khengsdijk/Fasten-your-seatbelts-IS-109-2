@@ -12,6 +12,7 @@ import javafx.scene.control.ComboBox;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.TextField;
+import javafx.scene.image.ImageView;
 import javafx.scene.layout.ColumnConstraints;
 import javafx.scene.layout.GridPane;
 import javafx.scene.layout.HBox;
@@ -66,10 +67,12 @@ public class BagageCatalogue {
         Zoekscherm.setVgap(10);
         Zoekscherm.setPrefSize(150, 100);
         Zoekscherm.setMaxSize(150, 100);
-        Zoekscherm.setStyle("-fx-base:darkred;-fx-border-color:white");
+        Zoekscherm.setStyle("-fx-base:darkred;-fx-border-color:darkred");
         Zoekscherm.setAlignment(Pos.CENTER);
         Zoekscherm.setPrefSize(250, 250);
         Zoekscherm.setMaxSize(250, 250);
+        
+        root.setStyle("-fx-background-color: white");
         
         StackPane EmptyPane = new StackPane();
         EmptyPane.setPrefSize(250, 150);
@@ -77,11 +80,19 @@ public class BagageCatalogue {
         StackPane EmptyPane2 = new StackPane();
         EmptyPane2.setPrefSize(50, 50);
         TextField tekst = new TextField();
-        tekst.setPromptText("Search");
+        tekst.setStyle("-fx-background-color: white;-fx-border-color:darkred");
+        tekst.setPromptText("Search...");
 
         HBox hbox = new HBox();
         hbox.setPadding(new Insets(5, 12, 5, 12));
         hbox.setSpacing(10);
+        
+        ImageView Corendon = new ImageView("/resources/corendon.jpg");
+        Corendon.setFitHeight(100);
+        Corendon.setFitWidth(300);
+
+        root.add(Corendon, 0, 1, 10, 1);
+        
         
         ObservableList<String> options = 
         FXCollections.observableArrayList(
@@ -117,6 +128,8 @@ public class BagageCatalogue {
         });
         
         Button buttonCurrent = new Button("Main Menu");
+        buttonCurrent.setPrefSize(90, 50);
+        buttonCurrent.setStyle("-fx-base:darkred;-fx-border-color:white");
         buttonCurrent.setOnAction(new EventHandler<ActionEvent>() {
             @Override
             public void handle(ActionEvent event) {
@@ -127,6 +140,7 @@ public class BagageCatalogue {
         buttonCurrent.setPrefSize(100, 20);
 
         Button buttonProjected = new Button("Options");
+        buttonProjected.setStyle("-fx-base:darkred;-fx-border-color:white");
         buttonProjected.setPrefSize(100, 20);
         hbox.getChildren().addAll(buttonCurrent, buttonProjected);
         
